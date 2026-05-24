@@ -1,5 +1,27 @@
-class HelloWorld {
+import java.util.Scanner;
+
+class NumberCheck {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        // Check even or odd
+        if (num % 2 == 0) {
+            System.out.println(num + " is Even");
+        } else {
+            System.out.println(num + " is Odd");
+        }
+
+        // Print table of the number
+        System.out.println("\nMultiplication Table:");
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+
+        sc.close();
     }
 }
